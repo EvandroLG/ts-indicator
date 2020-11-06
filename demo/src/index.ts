@@ -1,9 +1,13 @@
 import indicator from '../../src/index';
 
 const onReady = () => {
-  document.body.appendChild(document.createTextNode('Lorem '.repeat(5000)));
+  const content = document.getElementById('content');
+  content.appendChild(document.createTextNode('Lorem '.repeat(5000)));
 
-  indicator();
+  indicator({
+    element: content,
+    color: 'green',
+  });
 };
 
 document.addEventListener('DOMContentLoaded', onReady);
