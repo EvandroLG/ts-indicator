@@ -11,11 +11,11 @@ export const getElement = (element: ElementType) => {
 };
 
 export const throttle = (callback: () => any, time: number) => {
-  let pool: number | null = null;
+  let pool: ReturnType<typeof setTimeout> | null = null;
 
   return () => {
     if (!pool) {
-      setTimeout(() => {
+      pool = setTimeout(() => {
         callback();
         pool = null;
       }, time);
