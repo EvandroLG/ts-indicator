@@ -14,6 +14,9 @@ or
 $ yarn add ts-indicator
 ```
 
+## Example
+- (Complete example)[https://codesandbox.io/s/ts-indicator-wwud4]
+
 ## Parameters
 * <code>element?: string | HTMLElement</code><br>
 indicator uses this parameter to find the element in the DOM thee. By default, it takes the `body` element.
