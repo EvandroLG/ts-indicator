@@ -15,7 +15,7 @@ $ yarn add ts-indicator
 ```
 
 ## Example
-- (Complete example)[https://codesandbox.io/s/ts-indicator-wwud4]
+- [Complete example](https://codesandbox.io/s/ts-indicator-wwud4)
 
 ## Parameters
 * <code>element?: string | HTMLElement</code><br>
