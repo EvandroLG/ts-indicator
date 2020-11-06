@@ -16,7 +16,7 @@ $ yarn add ts-indicator
 
 ## Parameters
 * <code>element?: string | HTMLElement</code><br>
-`indicator` uses this parameter to find the element in the DOM thee. By default, it takes the `body` element.
+indicator uses this parameter to find the element in the DOM thee. By default, it takes the `body` element.
 
 * <code>color?: string</code><br>
 Progress bar color
