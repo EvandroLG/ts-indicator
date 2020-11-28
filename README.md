@@ -1,5 +1,5 @@
 # ts-indicator [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
-A tiny reading position ts-indicator library
+A tiny reading position indicator library
 
 ## Installation
 To install `ts-indicator`, execute:
