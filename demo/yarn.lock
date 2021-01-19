@@ -4911,6 +4911,11 @@ tr46@^1.0.1:
   dependencies:
     punycode "^2.1.0"
 
+ts-indicator@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ts-indicator/-/ts-indicator-0.1.0.tgz#f65701faba12b6ff9470b06cae04e7e8cd67e18b"
+  integrity sha512-4mGZHJgF+3jm0fMr72OMm5BlE7q8kMrZB1/Rbb+g9WHhLwCbMrNoBoqalKu4qD8nG1Oabyqm+HwG4A1uE4L9nQ==
+
 tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"

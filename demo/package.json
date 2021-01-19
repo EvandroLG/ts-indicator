@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "parcel": "^1.12.4"
+  },
+  "dependencies": {
+    "ts-indicator": "^0.1.0"
   }
 }

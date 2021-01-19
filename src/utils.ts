@@ -1,16 +1,21 @@
 type ElementType = string | HTMLElement;
 
-export const isString = (value: ElementType) => typeof value === 'string';
+export const createDiv = (cssText: string) => {
+  const progress = document.createElement('div');
+  progress.style.cssText = cssText;
+
+  return progress;
+};
 
 export const getElement = (element: ElementType) => {
-  if (isString(element)) {
-    return document.querySelector(element as string);
+  if (typeof element === 'string') {
+    return document.querySelector(element);
   }
 
   return element;
 };
 
-export const throttle = (callback: () => any, time: number) => {
+export const throttle = (callback: () => void, time: number) => {
   let pool: ReturnType<typeof setTimeout> | null = null;
 
   return () => {
