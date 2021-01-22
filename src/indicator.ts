@@ -3,14 +3,15 @@ import { createDiv, getElement, throttle } from './utils';
 type IndicatorType = {
   element?: string | HTMLElement;
   color?: string;
+  height?: string;
 };
 
-const indicator = ({ element, color }: IndicatorType = {}) => {
+const indicator = ({ element, color, height }: IndicatorType = {}) => {
   const progress = createDiv(`
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
-    border-top: 1vh solid ${color ?? 'blue'};
+    border-top: ${height ?? '1vh'} solid ${color ?? 'blue'};
     transition: width 0.4s ease-out;
     width: 0%;
   `);
@@ -24,7 +25,11 @@ const indicator = ({ element, color }: IndicatorType = {}) => {
   }
 
   const onScroll = throttle(() => {
-    const max = domElement.scrollHeight - window.innerHeight;
+    const { scrollHeight } = domElement;
+    const offsetTop =
+      domElement instanceof HTMLElement ? domElement.offsetTop : 0;
+    const max = scrollHeight + offsetTop - window.innerHeight;
+
     progress.style.width = `${(window.pageYOffset / max) * 100}%`;
   }, 300);
 
