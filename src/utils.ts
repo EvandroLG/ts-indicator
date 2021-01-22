@@ -2,6 +2,7 @@ type ElementType = string | HTMLElement;
 
 export const createDiv = (cssText: string) => {
   const progress = document.createElement('div');
+  progress.id = 'ts-indicator';
   progress.style.cssText = cssText;
 
   return progress;
