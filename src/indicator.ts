@@ -6,6 +6,13 @@ type IndicatorType = {
   height?: string;
 };
 
+/**
+ * A tiny reading position indicator library
+ * @param {undefined | string | HTMLElement} element - used to update the progress according with the scroll position
+ * @param {string?} color - color of the progress element
+ * @param {string?} height - height of the progress element
+ * @returns {void}
+ */
 const indicator = ({ element, color, height }: IndicatorType = {}) => {
   const domElement = getElement(element ?? document.body);
 
@@ -24,6 +31,10 @@ const indicator = ({ element, color, height }: IndicatorType = {}) => {
 
   document.body.prepend(progress);
 
+  /**
+   * Update the progress width when the scroll event is triggered
+   * @returns {void}
+   */
   const onScroll = throttle(() => {
     const { scrollHeight } = domElement;
     const offsetTop =
