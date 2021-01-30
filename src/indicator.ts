@@ -9,7 +9,7 @@ type IndicatorType = {
 /**
  * A tiny reading position indicator library
  * @param {undefined | string | HTMLElement} element - used to update the progress according with the scroll position
- * @param {string?} color - color of the progress element
+ * @param {string?} color - color of the progressbar element
  * @param {string?} height - height of the progress element
  */
 const indicator = ({ element, color, height }: IndicatorType = {}) => {
