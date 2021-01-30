@@ -46,6 +46,9 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.7.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.18.0",
     "husky": "^4.3.0",
     "size-limit": "^4.7.0",
     "tsdx": "^0.14.1",
