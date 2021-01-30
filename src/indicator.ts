@@ -1,4 +1,4 @@
-import { createDiv, getElement, throttle } from './utils';
+import { createDiv, getElement, throttle, handleProgressUpdate } from './utils';
 
 type IndicatorType = {
   element?: string | HTMLElement;
@@ -11,7 +11,6 @@ type IndicatorType = {
  * @param {undefined | string | HTMLElement} element - used to update the progress according with the scroll position
  * @param {string?} color - color of the progress element
  * @param {string?} height - height of the progress element
- * @returns {void}
  */
 const indicator = ({ element, color, height }: IndicatorType = {}) => {
   const domElement = getElement(element ?? document.body);
@@ -33,18 +32,20 @@ const indicator = ({ element, color, height }: IndicatorType = {}) => {
 
   /**
    * Update the progress width when the scroll event is triggered
-   * @returns {void}
    */
-  const onScroll = throttle(() => {
-    const { scrollHeight } = domElement;
-    const offsetTop =
-      domElement instanceof HTMLElement ? domElement.offsetTop : 0;
-    const max = scrollHeight + offsetTop - window.innerHeight;
-
-    progress.style.width = `${(window.pageYOffset / max) * 100}%`;
+  const handleScroll = throttle(() => {
+    handleProgressUpdate(domElement, progress);
   }, 300);
 
-  window.addEventListener('scroll', onScroll);
+  /**
+   * Update the progress width when the resize event is triggered
+   */
+  const handleResize = throttle(() => {
+    handleProgressUpdate(domElement, progress);
+  }, 300);
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleResize);
 };
 
 export default indicator;
