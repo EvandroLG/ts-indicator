@@ -1,5 +1,11 @@
 import indicator from '../src';
 
+jest.unmock('../src/utils');
+const utils = require('../src/utils');
+
+utils.throttle = jest.fn(callback => callback());
+utils.handleProgressUpdate = jest.fn();
+
 function getProgressBar() {
   return document.getElementById('ts-indicator');
 }
@@ -24,6 +30,14 @@ describe('indicator', () => {
     );
   }
 
+  function verifyEvents(event: 'scroll' | 'resize') {
+    indicator();
+    window.dispatchEvent(new CustomEvent(event));
+
+    expect(utils.throttle).toHaveBeenCalledWith(expect.any(Function), 300);
+    expect(utils.handleProgressUpdate).toHaveBeenCalled();
+  }
+
   it('should render the progress element with the default style props', () => {
     verifyProgress();
   });
@@ -37,5 +51,13 @@ describe('indicator', () => {
     const progress = getProgressBar();
 
     expect(progress).toBeNull();
+  });
+
+  it('should update the progress width when scroll event is triggered', () => {
+    verifyEvents('scroll');
+  });
+
+  it('should update the progress width when resize event is triggered', () => {
+    verifyEvents('resize');
   });
 });
