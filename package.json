@@ -13,7 +13,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test",
+    "test": "tsdx test --forceExit --detectOpenHandles",
     "lint": "eslint src/*.ts",
     "prepare": "tsdx build",
     "size": "size-limit",
