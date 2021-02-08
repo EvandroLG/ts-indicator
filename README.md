@@ -17,6 +17,7 @@ $ yarn add ts-indicator
 ```
 
 ## Example
+[Example](https://imgur.com/mcRHi5K)
 
 - [Complete example](https://codesandbox.io/s/ts-indicator-wwud4)
 
