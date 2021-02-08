@@ -18,6 +18,8 @@ $ yarn add ts-indicator
 
 ## Example
 
+![page](https://imgur.com/IAr2cy2)
+
 - [Complete example](https://codesandbox.io/s/ts-indicator-wwud4)
 
 ## Parameters
