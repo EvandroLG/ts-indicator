@@ -18,7 +18,7 @@ $ yarn add ts-indicator
 
 ## Example
 <p align="center">
-  ![Example](https://media.giphy.com/media/RZbQUfCF7qhKXVRmnZ/giphy.gif)
+  <img src="https://media.giphy.com/media/RZbQUfCF7qhKXVRmnZ/giphy.gif">
 </p>
 
 - [Complete example](https://codesandbox.io/s/ts-indicator-wwud4)
