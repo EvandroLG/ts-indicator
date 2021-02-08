@@ -3,7 +3,7 @@
 A tiny reading position indicator library
 
 <p align="center">
-  <img src="https://media.giphy.com/media/YQ94HinD0BVKUl2QA5/giphy.gif">
+  <img src="https://media.giphy.com/media/MvOdYUpALTqk18RwiM/giphy.gif">
 </p>
 
 ## Installation
