@@ -2,6 +2,10 @@
 
 A tiny reading position indicator library
 
+<p align="center">
+  <img src="https://media.giphy.com/media/RZbQUfCF7qhKXVRmnZ/giphy.gif">
+</p>
+
 ## Installation
 
 To install `ts-indicator`, execute:
@@ -17,9 +21,6 @@ $ yarn add ts-indicator
 ```
 
 ## Example
-<p align="center">
-  <img src="https://media.giphy.com/media/RZbQUfCF7qhKXVRmnZ/giphy.gif">
-</p>
 
 - [Complete example](https://codesandbox.io/s/ts-indicator-wwud4)
 
